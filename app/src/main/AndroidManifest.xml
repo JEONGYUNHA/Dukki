@@ -4,7 +4,6 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -16,26 +15,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity"/>
         <activity android:name=".LoginActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".JoinActivity" android:parentActivityName=".MainActivity"/>
 
         <activity android:name=".SelectActivity"/>
 
+        <activity android:name=".WriteActivity"/>
+
         <activity android:name=".MenuActivity" android:parentActivityName = ".SelectActivity"/>
+
+        <activity android:name=".CommunityActivity" android:parentActivityName = ".SelectActivity"/>
 
         <activity android:name=".RatingActivity" android:parentActivityName = ".SelectActivity"/>
 
         <activity android:name=".SeeReviewActivity" android:parentActivityName = ".RatingActivity"/>
 
-        <activity android:name=".WriteActivity"/>
-
-        <activity android:name=".CommunityActivity" android:parentActivityName = ".SelectActivity"/>
-
         <activity android:name=".GiveReviewActivity"/>
 
         <activity android:name=".WriteReview"/>
+
 
     </application>
 
