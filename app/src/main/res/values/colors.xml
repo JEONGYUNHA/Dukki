@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorApp">#537997</color>
+    <color name="colorMenuBtn">#7891A5</color>
+    <color name="colorCommunityBtn">#a9bccb</color>
+    <color name="colorScoreBtn">#cc5c5c</color>
+    <color name="colorMyPageBtn">#cbd6df</color>
+    <color name="gray">#EEECEC</color>
+
+
 </resources>
