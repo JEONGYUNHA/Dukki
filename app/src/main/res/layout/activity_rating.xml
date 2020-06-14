@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#C0C7CD"
+    >
+
+    <Button
+        android:id="@+id/seeReview"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button"
+        android:text="평점 보기"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/giveReview"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button"
+        android:text="별점 주기"
+        android:textSize="30dp" />
+
+</LinearLayout>
