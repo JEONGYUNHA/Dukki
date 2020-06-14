@@ -3,6 +3,7 @@ package com.example.dukki
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_givereview.*
@@ -17,10 +18,10 @@ class GiveReviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_givereview)
 
-        val prefs = getSharedPreferences("user", 0)
-        userId = prefs.getString("id", "")!!
+//        val prefs = getSharedPreferences("user", 0)
+//        userId = prefs.getString("id", "")!!
 
-        readOrderMenu(userId)
+        readOrderMenu()
 
         // swipe 했을 시 게시판 새로 고침
         swipe.setOnRefreshListener {
@@ -33,20 +34,19 @@ class GiveReviewActivity : AppCompatActivity() {
     // swipe 했을 시 새로 고침되는 함수
     private fun afterWrite(){
         readOrderMenuData.clear()
-        readOrderMenu(userId)
+        readOrderMenu()
     }
 
     // DB 'orders'에서 사용자가 먹은 메뉴 불러오기
-    private fun readOrderMenu(userId: String?) {
-        db.collection("orders")
-            .whereEqualTo("id", userId)
+    private fun readOrderMenu() {
+        db.collection("menu")
             .get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
-                    datas[0] = document.get("menu").toString()  // 사용자가 먹은 메뉴
+                    datas[0] = document.get("name").toString()  // 사용자가 먹은 메뉴
                     datas[1] = (0.0).toString() // 별점 -> 0.0으로 초기화
                     datas[2] = null // review -> null로 초기화
-                    readOrderMenuData.add(ReadOrderMenuData(datas[0],datas[1]!!.toFloat(),datas[2],userId))
+                    readOrderMenuData.add(ReadOrderMenuData(datas[0],datas[1]!!.toFloat(),datas[2]))
                 }
                 upload()
             }
