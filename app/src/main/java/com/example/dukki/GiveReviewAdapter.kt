@@ -14,7 +14,6 @@ class GiveReviewAdapter : BaseAdapter {
     private val ctx: Context?
     private val data: ArrayList<ReadOrderMenuData>
     private val db = FirebaseFirestore.getInstance()
-    private var userId = "1"
 
 
     constructor(_ctx: Context?, _data: ArrayList<ReadOrderMenuData>) {
@@ -67,7 +66,6 @@ class GiveReviewAdapter : BaseAdapter {
 
         // DB 'reviews'에서 사용자 id와 메뉴 이름으로 별점과 리뷰 불러오기
         db.collection("reviews")
-            .whereEqualTo("id", d1.id)
             .whereEqualTo("menu", d1.menu)
             .get()
             .addOnSuccessListener { documents ->
