@@ -29,6 +29,10 @@
 
         <activity android:name=".SeeReviewActivity" android:parentActivityName = ".RatingActivity"/>
 
+        <activity android:name=".WriteActivity"/>
+
+        <activity android:name=".CommunityActivity" android:parentActivityName = ".SelectActivity"/>
+
         <activity android:name=".GiveReviewActivity"/>
 
         <activity android:name=".WriteReview"/>

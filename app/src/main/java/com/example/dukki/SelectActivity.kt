@@ -29,6 +29,13 @@ class SelectActivity : AppCompatActivity() {
         }
 
 
+        communityBtn.setOnClickListener{
+            val intent = Intent(this, CommunityActivity::class.java)
+            intent.putExtra("id", id)
+            startActivity(intent)
+        }
+
+
     }
 
 }

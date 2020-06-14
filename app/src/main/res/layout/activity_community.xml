@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/gray"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:background="@drawable/button"
+            android:text="글쓰러가기"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/writeBtn"
+            android:layout_marginRight="5sp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/emptyBoard"
+        android:text="게시판"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="64dp"
+            android:gravity="center"
+            android:horizontalSpacing="4dp"
+            android:numColumns="1"
+            android:padding="6dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>
