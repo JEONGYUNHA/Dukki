@@ -1,5 +1,6 @@
 package com.example.dukki
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.firestore.FirebaseFirestore
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         // 회원가입 버튼 클릭 시
         joinBtn.setOnClickListener{
-            //회원가입 view
+            val intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
         }
 
         // Preference에 저장된 사용자 id 불러오기
