@@ -1,9 +1,7 @@
 package com.example.dukki
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 
@@ -17,7 +15,13 @@ class MenuActivity  : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-
+        val adapter = MyPagerAdapter(supportFragmentManager)
+        // Adapter에 Fragment 추가하기
+        adapter.addFragment(MenuFirstFragment(), "면류&찌개&김밥")
+        adapter.addFragment(MenuSecondFragment(), "덮밥류&비빔밥")
+        adapter.addFragment(MenuThirdFragment(), "볶음밥&오므라이스&돈까스")
+        viewPager.adapter = adapter
+        tabs.setupWithViewPager(viewPager)
 
     }
 
