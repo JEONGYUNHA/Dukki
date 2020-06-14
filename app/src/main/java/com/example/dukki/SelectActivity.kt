@@ -2,8 +2,6 @@ package com.example.dukki
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_select.*
 
