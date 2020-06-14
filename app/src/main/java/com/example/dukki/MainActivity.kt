@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         // 로그인 버튼 클릭 시
         loginBtn.setOnClickListener{
-            //로그인 view 추가 예정
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         // 회원가입 버튼 클릭 시
